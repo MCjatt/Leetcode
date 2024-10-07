@@ -1,11 +1,20 @@
-nums = [1,1,0,1,0,1,1,0]
+nums = [1,2,3,1,2,3]
 k = 2
-ind = 0
-for i in range(len(nums) - k + 1):
-    ones = nums[i:i + k]
-    print(ones)
-    if sum(ones) == k:
-        ind+=1
+i = 0
+boo = "true"
+n = 0
+r = nums[n:k + n + 1]
+for i in range(len(nums) - 1):
+    if nums.count(nums[i]) > 1 and nums[i] in r:
+                
+        print("t",nums[i] ,n, r)
+        boo = "true"
+        print(boo)
     else:
-        None
-    print(ones)
+        print("f",nums[i], n, r)
+        boo = "false"
+
+    
+    n += 1        
+    r = nums[n:k + n + 1]
+print(boo)
